@@ -28,7 +28,45 @@ You can learn more about the NativeScript core theme at https://github.com/nativ
         <ng-template let-item="item">
             <StackLayout>
                 <Label [nsRouterLink]="['/item', item.id]" [text]="item.name"></Label>
+                
             </StackLayout>
+            
         </ng-template>
+        
     </ListView>
 </GridLayout>
+<BottomNavigation height="200px">
+    <TabStrip>
+        <TabStripItem>
+            <Label text="Home"></Label>
+            <Image src="res://home"></Image>
+        </TabStripItem>
+        <TabStripItem>
+            <Label text="Characters"></Label>
+            <Image src="res://settings"></Image>
+        </TabStripItem>
+        <TabStripItem>
+            <Label text="Scenarios"></Label>
+            <Image src="res://search"></Image>
+        </TabStripItem>
+    </TabStrip>
+    <TabContentItem>
+        <GridLayout>
+            <Label textWrap="true"
+                text="Home Page"
+                class="h2 text-center"></Label>
+        </GridLayout>
+    </TabContentItem>
+    <TabContentItem>
+        <GridLayout>
+            <Label text="Characters Page" class="h2 text-center">
+            </Label>
+        </GridLayout>
+    </TabContentItem>
+    <TabContentItem>
+        <GridLayout>
+            <Label text="Scenarios Page" class="h2 text-center">
+            </Label>
+        </GridLayout>
+    </TabContentItem>
+</BottomNavigation>
