@@ -27,6 +27,12 @@ const routes: Routes = [
         component: NSEmptyOutletComponent,
         loadChildren: () => import("~/app/search/search.module").then((m) => m.SearchModule),
         outlet: "searchTab"
+    },
+    {
+        path: "starWars",
+        component: NSEmptyOutletComponent,
+        loadChildren: () => import("~/app/star-wars/star-wars.module").then((m) => m.StarWarsModule),
+        outlet: "starWarsTab"
     }
 ];
 
