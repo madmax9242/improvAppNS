@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 import { DataService, DataItem } from "../shared/data.service";
-import { getFile, getImage, getJSON, getString, request, HttpResponse } from "tns-core-modules/http";
+
 
 @Component({
     selector: "Home",
