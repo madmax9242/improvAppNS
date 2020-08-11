@@ -1,4 +1,5 @@
 export class StarWarsCharacter {
+    id: number;
     name: string;
     height: string;
     hair_color: string;
@@ -14,5 +15,4 @@ export class StarWarsCharacter {
     created: string;
     edited: string;
     url: string;
-
 }
