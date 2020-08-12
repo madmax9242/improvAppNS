@@ -19,13 +19,13 @@ export class DataService {
         },
         {
             id: 2,
-            name: "Item 2",
-            description: "Description for Item 2"
+            name: "Blue Lightsaber",
+            description: "Lightsaber of the blue variety"
         },
         {
             id: 3,
-            name: "Item 3",
-            description: "Description for Item 3"
+            name: "Purple Lightsaber",
+            description: "Purple Haze!"
         },
         {
             id: 4,

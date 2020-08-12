@@ -2,7 +2,13 @@
     <Label text="Search"></Label>
 </ActionBar>
 
-<GridLayout class="page__content">
-    <Label class="page__content-icon fas" text="&#xf002;"></Label>
-    <Label class="page__content-placeholder" text="<!-- Search page content goes here -->"></Label>
-</GridLayout>
+<DockLayout stretchLastChild="false">
+
+    <!-- <Button dock="bottom" text="bottom" style="background-color: #AA0078; margin: 5;"></Button> -->
+    <Label class="big-text" dock="top" text="Character- {{character1.name}}"></Label>
+    <Label dock="top" text="Character- {{character2.name}}"></Label>
+    <Label dock="top" text="Setting- {{setting.name}}"></Label>
+    <Label dock="top" text="Activity- {{activity.name}}"></Label>
+    <Button (tap)="generateScenario()" dock="top" text="top" style="background-color: #B3B3D7; margin: 5;"></Button>
+
+</DockLayout>
