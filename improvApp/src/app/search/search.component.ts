@@ -33,27 +33,23 @@ export class SearchComponent implements OnInit {
     }
 
     generateScenario() {
+        //this.scenarioService.loadData();
         this.scenarioService.getAllCharacters().subscribe(character => {
             this.listOfCharacters = character;
             this.character1 = this.listOfCharacters[this.getRandomNumberBetween(0, (this.listOfCharacters.length - 1))];
             this.character2 = this.listOfCharacters[this.getRandomNumberBetween(0, (this.listOfCharacters.length - 1))];
-            console.log("Character 1- " + this.character1.name + "  Character 2- " + this.character2.name);
-            
-            
+            //console.log("Character 1- " + this.character1.name + "  Character 2- " + this.character2.name);
         });
 
         this.scenarioService.getAllActivities().subscribe(activities => {
             this.listOfActivities = activities;
             this.activity = this.listOfActivities[this.getRandomNumberBetween(0, (this.listOfActivities.length - 1))];
-            console.log("Activity- " + this.activity.name);
-            
             
         });
 
         this.scenarioService.getAllSettings().subscribe(settings => {
             this.listOfSettings = settings;
             this.setting = this.listOfSettings[this.getRandomNumberBetween(0, (this.listOfSettings.length - 1))];
-            console.log("Setting- " + this.setting.name );
             
         });
         

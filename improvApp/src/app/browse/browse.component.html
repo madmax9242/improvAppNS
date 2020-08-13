@@ -1,8 +1,30 @@
 <ActionBar>
-    <Label text="Browse"></Label>
+    <Label text="Contribute"></Label>
 </ActionBar>
 
-<GridLayout class="page__content">
-    <Label class="page__content-icon far" text="&#xf1ea;"></Label>
-    <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
+<GridLayout>
+	<ScrollView>
+		<StackLayout class="form">
+            <StackLayout class="input-field">
+                <TextField id="characterField" class="input text-display" [(ngModel)]="characterFieldValue" hint="Enter New Character">
+                </TextField>
+            </StackLayout>
+            <StackLayout class="input-field">
+                <TextField id="settingField" class="input text-display" [(ngModel)]="settingFieldValue" hint="Enter New Setting">
+                </TextField>
+		    </StackLayout>
+            <StackLayout class="input-field">
+                <TextField id="activityField" class="input text-display" [(ngModel)]="activityFieldValue" hint="Enter New Activity">
+                </TextField>
+		    </StackLayout>
+
+            <Button  text="Add New Info" (tap)="displayFieldValues()" style="background-color: #B3B3D7; margin: 5;"></Button>
+
+            
+            <Label text="The Character up there- {{characterFieldValue}}"></Label>
+            <Label text="The Setting up there- {{settingFieldValue}}"></Label>
+            <Label text="The Activity up there- {{activityFieldValue}}"></Label>
+		</StackLayout>
+	</ScrollView>
 </GridLayout>
+

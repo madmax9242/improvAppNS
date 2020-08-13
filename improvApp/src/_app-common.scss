@@ -28,10 +28,6 @@
     }
 }
 
-.big-text {
-    font-size: 20px;
-}
-
 // Common page class
 .page__content {
     &-icon,
@@ -47,4 +43,9 @@
         vertical-align: top;
         margin-top: 20%;
     }
+}
+
+.text-display {
+    font-size: 20;
+    padding: 15;
 }

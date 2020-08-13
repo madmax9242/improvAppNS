@@ -18,6 +18,12 @@ export class ScenarioService {
 
   constructor(private http: HttpClient) { }
 
+  // loadData(): any {
+  //   this.http.get(this.baseUrl + "character/data");
+  //   this.http.get(this.baseUrl + "setting/data");
+  //   this.http.get(this.baseUrl + "activity/data");
+  // }
+
   getCharacterById(id: number): Observable<PlayerCharacter> {
     return this.http.get<PlayerCharacter>(this.baseUrl + id);
   }
@@ -34,13 +40,19 @@ export class ScenarioService {
     return this.http.get<Activity[]>(this.baseUrl + "activity/all");
   }
 
-  getCharacterWithJSON() {
-    getJSON("https://improv-app-9242.herokuapp.com/character/2").then((r: any) => {
-      //console.log("Response: " + r);
+  postNewActivity(activity: Activity): Observable<Activity> {
+    console.log("ABOUT TO POST NEW ACTIVITY");
+    return this.http.post<Activity>(this.baseUrl + "activity", activity);
+  }
 
-      }, (e) => {
-        //console.log("Error: " + e)
-        });
+  postNewCharacter(character: PlayerCharacter): Observable<PlayerCharacter> {
+    console.log("ABOUT TO POST NEW CHARACTER");
+    return this.http.post<PlayerCharacter>(this.baseUrl + "character" , character);
+  }
+
+  postNewSetting(setting: Setting): Observable<Setting> {
+    console.log("ABOUT TO POST NEW SETTING");
+    return this.http.post<Setting>(this.baseUrl + "setting" , setting);
   }
 
 
