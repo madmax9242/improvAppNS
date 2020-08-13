@@ -18,11 +18,11 @@ export class ScenarioService {
 
   constructor(private http: HttpClient) { }
 
-  loadData(): any {
-    this.http.get(this.baseUrl + "character/data");
-    this.http.get(this.baseUrl + "setting/data");
-    this.http.get(this.baseUrl + "activity/data");
-  }
+  // loadData(): any {
+  //   this.http.get(this.baseUrl + "character/data");
+  //   this.http.get(this.baseUrl + "setting/data");
+  //   this.http.get(this.baseUrl + "activity/data");
+  // }
 
   getCharacterById(id: number): Observable<PlayerCharacter> {
     return this.http.get<PlayerCharacter>(this.baseUrl + id);
@@ -40,17 +40,20 @@ export class ScenarioService {
     return this.http.get<Activity[]>(this.baseUrl + "activity/all");
   }
 
-  // postNewActivity(activity: Activity): Observable<Activity> {
-  //   return this.http.post<Activity>(this.baseUrl + "activity", activity);
-  // }
+  postNewActivity(activity: Activity): Observable<Activity> {
+    console.log("ABOUT TO POST NEW ACTIVITY");
+    return this.http.post<Activity>(this.baseUrl + "activity", activity);
+  }
 
-  // postNewCharacter(character: PlayerCharacter): Observable<PlayerCharacter> {
-  //   return this.http.post<PlayerCharacter>(this.baseUrl + "character" , character);
-  // }
+  postNewCharacter(character: PlayerCharacter): Observable<PlayerCharacter> {
+    console.log("ABOUT TO POST NEW CHARACTER");
+    return this.http.post<PlayerCharacter>(this.baseUrl + "character" , character);
+  }
 
-  // postNewSetting(setting: Setting): Observable<Setting> {
-  //   return this.http.post<Setting>(this.baseUrl + "character" , setting);
-  // }
+  postNewSetting(setting: Setting): Observable<Setting> {
+    console.log("ABOUT TO POST NEW SETTING");
+    return this.http.post<Setting>(this.baseUrl + "setting" , setting);
+  }
 
 
 
